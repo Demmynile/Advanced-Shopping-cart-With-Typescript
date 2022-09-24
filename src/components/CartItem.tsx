@@ -1,6 +1,6 @@
 import React from "react"
 import { useShoppingCart } from "../context/ShoppingCartContext"
-import storeItems from '../data/items.json'
+import {StoreData} from '../data/StoreData.js'
 import {Button, Stack } from 'react-bootstrap'
 import { formatCurrency } from "../utilies/formatCurrency"
 
@@ -13,7 +13,7 @@ type CartItemProps = {
 
 export const CartItem = ({id , quantity} : CartItemProps) => {
      const {removeFromCart } = useShoppingCart()
-	 const item = storeItems.find(item => item.id === id)
+	 const item = StoreData.find(item => item.id === id)
 	 if(item == null) return null
 
 	return (
