@@ -1,13 +1,12 @@
 import { Navbar as NavbarBs  , Container, Nav , Button } from "react-bootstrap"
 import { NavLink } from "react-router-dom"
-import {useState} from 'react'
 import { useShoppingCart } from "../context/ShoppingCartContext"
 import '../styles/navbar.css'
 
 export const Navbar = () => {
 	const {openCart , cartQuantity} = useShoppingCart()
 	return (
-		<NavbarBs  sticky = "top" className = "bg-white shadow-sm mb-3" >
+		<NavbarBs  sticky = "top" className = "bg-white shadow-sm mb-3 d-flex justify-content-between" >
 			<Container>
 				<Nav.Link to = '/' as={NavLink} className="fs-1 text-primary">Spinly</Nav.Link>
 				
